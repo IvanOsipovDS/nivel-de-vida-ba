@@ -1,34 +1,91 @@
-# 🧠 Classifying Buenos Aires Neighborhoods by Living Conditions
+# 🧠 Classifying Buenos Aires Neighborhoods by Quality of Life
 
-This Data Science project explores socioeconomic conditions across neighborhoods in Buenos Aires using open geospatial and administrative datasets. Our goal is to classify areas by quality of life, infrastructure, and social indicators, and to visualize them interactively.
-We cluster using PCA and KMeans, and create interactive maps.
+This project utilizes open geospatial and socio-economic data to classify the neighborhoods of Buenos Aires, Argentina, into meaningful clusters based on quality of life, infrastructure, safety, and environmental indicators.
 
-## 📦 Dataset Sources
+The result is an interpretable, interactive map showcasing distinct urban zones, supported by unsupervised machine learning and thoughtful feature engineering.
 
-- Crime and demographics — BA Open Data
-- Noise, green areas, metro, hospitals — Gobierno de la Ciudad
-- Shapefiles — GeoBA
+---
 
-## 🛠 Methods
+## 📍 Project Goals
 
-- Feature Engineering (e.g., slum density, green space %, crime rate per 1000)
-- PCA for dimensionality reduction
-- KMeans clustering
-- Interactive map with Folium
+- Aggregate and process diverse datasets about Buenos Aires neighborhoods.
+- Engineer meaningful features (e.g., slum density, crime rate, green space percentage).
+- Apply PCA and KMeans clustering to detect quality-of-life zones.
+- Visualize spatial patterns through interactive and static maps.
 
-## 🎯 Results
+---
 
-We identified 6 clusters:
-- Highly comfortable
-- Balanced safe zones
-- Marginalized and high crime zones
-...
+## 🧩 Methods & Tools
 
-## 🗺️ Final Interactive Map
+- **Data Engineering:** geopandas, pandas, shapely  
+- **Modeling:** PCA, KMeans (scikit-learn)  
+- **Visualization:** seaborn, matplotlib, folium  
+- **Clustering validation:** Elbow & Silhouette methods  
+- **Mapping:** choropleth maps + interactive map with popup tooltips
 
-![Map preview](outputs/map_preview.png)
+---
 
-🖱️ [Click here to view the interactive map](outputs/buenos_aires_zones_map.html)
+## 🗃 Data Sources
 
-## 📁 Project Structure
+- Gobierno de la Ciudad de Buenos Aires – [data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
+- Slum boundaries – [Wikipedia](https://de.wikipedia.org/wiki/Liste_der_informellen_Siedlungen_in_Buenos_Aires)
+- Population census – INDEC 2010
+- Open shapefiles – GeoBA, BA Data
 
+---
+
+## 🧠 Key Features Engineered
+
+- `slum_density`, `crime_per_1000`, `green_area_pct`, `hospitals_per_1000`, `schools_per_1000`
+- `day_noise`, `night_noise`, `station_count`, `population_density`
+- 24 total features, reduced to 10 via PCA
+
+---
+
+## 📊 Clustering Results
+
+Using PCA and KMeans, neighborhoods were grouped into 6 clusters, each assigned a human-readable label such as:
+
+- “Highly comfortable living zone”
+- “Balanced safe zone”
+- “Marginalized and high crime”
+- ...
+
+These clusters reflect complex urban dynamics and offer insights for planning and social understanding.
+
+---
+
+## 🌐 Final Map (Interactive)
+
+📌 [Open the interactive map here](outputs/buenos_aires_zones_map.html)  
+(*Click on neighborhoods to explore zones and features!*)
+
+![Map Preview](outputs/map_preview.png)
+
+---
+
+## 📁 Repository Structure
+root/ ├── data/ # Raw and processed datasets 
+      ├── notebooks/ # Three Jupyter notebooks (EDA, Clustering, Visualization) 
+      ├── outputs/ # Saved files (map, processed data, charts) 
+      ├── README.md 
+      ├── requirements.txt
+
+---
+
+## 📌 Notebooks
+
+| Notebook | Purpose |
+|----------|---------|
+| `01_data_cleaning.ipynb` | Data loading, preprocessing, and feature engineering |
+| `02_clustering.ipynb`    | PCA, clustering, and cluster analysis |
+| `03_visualization.ipynb` | Static and interactive visualizations |
+
+---
+
+## 🙋 Author
+
+**Ivan Osipov**  
+📍 Based in Buenos Aires  
+💼 Data Scientist  
+🌐 [LinkedIn Profile](https://www.linkedin.com/in/ivan-osipov-dsml/)
