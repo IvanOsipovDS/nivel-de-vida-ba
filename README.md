@@ -57,10 +57,10 @@ These clusters reflect complex urban dynamics and offer insights for planning an
 
 ## 🌐 Final Map (Interactive)
 
-📌 [Open the interactive map here](outputs/buenos_aires_zones_map.html)  
+📌 [Open the interactive map here](docs/buenos_aires_zones_map.html)  
 (*Click on neighborhoods to explore zones and features!*)
 
-![Map Preview](outputs/map_preview.png)
+![Map Preview](docs/map_preview.png)
 
 ---
 
