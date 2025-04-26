@@ -83,6 +83,14 @@ root/ ├── data/ # Raw and processed datasets
 
 ---
 
+## 🎥 Presentation
+
+📄 [Download the Project Presentation (PDF)](presentation/BA_Neighborhoods_Clustering_Presentation.pdf)
+
+The presentation summarizes the project goals, methodology, clustering results, and final visualizations.
+
+---
+
 ## 🙋 Author
 
 **Ivan Osipov**  
